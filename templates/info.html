@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>recrutor requirment</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/info.css' %}">
+</head>
+<body>
+<fieldset>
+    <form action="info" method="post">
+    {% csrf_token %}
+     <div class="tittle">
+        <center><h1>WELCOME TO CAREER MAP</h1></center>
+        <center>
+            <label for="job roll" > <h2>find job seeker</h2></label><br>
+            <h2>Select Domain</h2> <br>
+            Mechanical<input type="radio" name="domain" value="MECHANICAL"><br>
+            Electrical<input type="radio" name="domain" value="ELECTRICAL"><br>
+            AI<input type="radio" name="domain" value="AI"><br>
+            ALL<input type="radio" name="domain" value="ALL"><br>
+
+            <input type="submit" value="search"><br>
+            <h3><a href="check post">check post / new post</a></h3>
+        </center>
+
+    </div>
+
+</form>
+</fieldset>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/logins.css' %}">
+    <link rel="script" type="text/css" href="{% static 'css/logins.js' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   </head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Login From</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+
+  </head>
+  <body>
+  <form action="login" method="post">
+      {% csrf_token %}
+
+    <div class="login_form_container">
+      <div class="login_form">
+        <h2>Login</h2>
+        <div class="input_group">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Username"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="button_group" id="login_button" >
+          <center ><button>
+              <input type="submit" value="submit" style=" background-color: #c94f4f; font-size: 20px;
+               letter-spacing: 2px; hight:50px; border-radius: 10px;">
+          </button></center>
+        </div>
+        <div class="fotter">
+          <a href="/reset_password">Forgot Password ?</a>
+          <a href="/add">SingUp</a>
+        </div>
+      </div>
+    </div>
+
+
+ </form>
+  </body>
+</html>
+</body>
+</html>

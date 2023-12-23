@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>job search</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/job.css' %}">
+
+</head>
+<body>
+
+<form method="post" action="apply">
+{% csrf_token %}
+
+<center>
+
+
+       <table class="tab">
+
+        {% for i in j %}
+            <tr>
+            <table  class="tab">
+                <tr>
+                    <td><h3>Job title </h3>{{ i.job_title }}</td>
+                </tr>
+                <tr>
+                    <td><h3>Job discription </h3>{{ i.job_description }}</td>
+                </tr>
+                <tr>
+                    <td><h3>Company namae</h3>{{ i.company_name }}</td>
+                </tr>
+                <tr>
+                    <td><h3>Contact </h3>{{ i.contact }}</td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Apply"></td>
+                </tr>
+
+            </table>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+</form>
+</body>
+</html>

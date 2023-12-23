@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <table border="10px">
+        <thead>
+        <th>Username : </th>
+        <th>Password : </th>
+        <th>Mail ID : </th>
+        <th>Phone No. : </th>
+        </thead>
+        <tbody>
+        {% for i in data %}
+            <tr>
+            <td>{{ i.user_name }}</td>
+            <td>{{ i.password }}</td>
+            <td>{{ i.mail_id }}</td>
+            <td>{{ i.phone_number }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</center>
+
+</body>
+</html>

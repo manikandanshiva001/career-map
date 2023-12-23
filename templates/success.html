@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home </title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic";
+}
+header{
+    height: 100vh;
+    background-size:cover ;
+    background-position: center;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(../static/image/pexels-willian-justen-de-vasconcellos-15857478.jpg);
+}
+u1{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+u1 li{
+    display: inline-block;
+}
+u1 li a{
+    text-decoration: blink;
+    color: deeppink;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+u1 li.active{
+    background-color:white ;
+    color: black;
+}
+u1 li a:hover{
+    background-color: white;
+    color:black;
+}
+
+
+body{
+
+
+    margin-top:0px ;
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+.logo{
+            float: left;
+            margin-top: 2%;
+
+            color: white;
+        }
+
+.main{
+    max-width: 1300px;
+    margin: auto;
+}
+.tittle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.tittle h1,h3{
+    color: #ffffff;
+    font-size: 30px;
+}
+.tittle center{
+    color: white;
+    font-size: 30px;
+    font-family: "Rage Italic";
+}
+.tittle select{
+
+}
+.tittle input{
+    padding: 3px 25px;
+    flex: 1;
+    outline: lightgreen;
+}
+    </style>
+
+</head>
+<body >
+<header>
+
+
+        <div class="main">
+            <div class="logo">
+                <h1>Career Map</h1>
+            </div>
+        <u1>
+            <li class="active"><a href="/home">Home</a> </li>
+            <li><a href="/service">services</a> </li>
+            <li><a href="/go_to_login">Login</a> </li>
+            <li><a href="add_details">New User</a> </li>
+            <li><a href="contact_details">Contect Us</a> </li>
+            <li><a href="about_us">About</a> </li>
+         </u1>
+        </div>
+    <div class="tittle">
+        <h1>WELCOME TO CAREER MAP</h1>
+        <center>
+            <form action="search" method="post">
+                {% csrf_token %}
+            <label for="job roll" > job title</label><br>
+            Mechanical<input type="radio" name="job_title" value="MECHANICAL"><br>
+            Electrical<input type="radio" name="job_title" value="ELECTRICAL"><br>
+            AI<input type="radio" name="job_title" value="AI"><br>
+            ALL<input type="radio" name="job_title" value="ALL"><br>
+
+            <input type="submit" value="search"><br>
+
+            </form>
+        </center>
+
+    </div>
+
+
+
+
+
+</header>
+</body>
+</html>

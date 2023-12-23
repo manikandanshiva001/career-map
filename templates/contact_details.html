@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cotact us</title>
+    <link rel="stylesheet" type="text/css" href={% static 'css/contact_details.css' %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+}
+body{
+    background: #d7819e;
+    font-size: 20px;
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+.contact-box{
+    background: #fff;
+    display: flex;
+}
+.contact-left{
+    flex-basis: 100%;
+    padding: 40px;
+    background: #1c00b5;
+    color: white;
+}
+h1{
+    margin-bottom: 10px;
+}
+.container p{
+    margin-bottom: 40px;
+}
+.contact-left{
+    font-weight: 600;
+
+}
+tr td:first-child{
+    padding-right: 20px;
+}
+tr td{
+    padding-top: 20px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Contact with us</h1>
+    <p>we would to respond your queries and help you succeed.feel
+    free to get touch with us</p>
+    <div class="contact-box">
+        <div class='contact-left'>
+            <center><h3>Reach us</h3></center>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>mani423r@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>+91 9655059002</td>
+                </tr>
+                <tr>
+                    <td>Adress</td>
+                    <td>212-14 ,muneeshwaran nagar,<br>
+                        hosur,<br>
+                        opposite to shiva temple
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+    <div class="social media">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <a href="https://www.facebook.com/manikandan.shiva.94">  <ion-icon name="logo-facebook"></ion-icon>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

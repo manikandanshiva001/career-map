@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reset password</title>
+    <style>
+        body{
+            background-color: darkseagreen;
+        }
+        form{
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<center>
+ <form method="post">
+        {% csrf_token %}
+        Username : {{ d.user_name }}<br>
+        Mail ID : {{ d.mail_id }}<br>
+        Phone No. : {{ d.phone_number }}<br>
+        <a href="/reset/{{ d.id }}">Change Password</a>
+    </form>
+</center>
+</body>
+</html>

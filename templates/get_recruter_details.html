@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get recrutor details</title>
+    <style>
+          body{
+    height: 100vh;
+    background-size:cover ;
+    background-position: center;
+    background-color: #b6ffff;
+
+        }
+          .style{
+              margin-top: 100px;
+          }
+          .valid{
+              margin-top: 80px;
+              font-family: Garamond;
+              color: #cb8787;
+          }
+
+    </style>
+</head>
+<body>
+<center>
+<form action="check_recrutor" method="post">
+    {% csrf_token %}
+    <div class="valid">
+        <h3>
+            Please Enter valid USER NAME And Mail ID
+        </h3>
+
+    </div>
+    <div class="style">
+        <table>
+            <tr>
+                <td>ENTER  USER NAME</td>
+                <td><input type="text"  name="user_name"></td>
+            </tr>
+            <tr>
+                <td>ENTER  MAIL ID</td>
+                <td><input type="text" name="mail_id"></td>
+
+
+            </tr>
+            <tr >
+                 <td colspan="2">
+                     <center><input type="submit" value="conform your details"></center>
+                 </td>
+            </tr>
+        </table>
+    </div>
+
+</form>
+</center>
+</body>
+</html>

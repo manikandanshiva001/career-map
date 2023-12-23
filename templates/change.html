@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change</title>
+    <style>
+        body{
+            background-color: mistyrose;
+        }
+        table{
+            margin-top: 10%;
+            margin-left: 25%;
+
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <table>
+        <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+            <tr>
+                <td>Username :</td>
+                <td> <input type="text" name="user_name" value={{ d.user_name }}></td>
+            </tr>
+            <tr>
+                <td>Mail id:</td>
+                <td> <input type="text" name="mail_id" value={{ d.mail_id }}></td>
+            </tr>
+            <tr>
+                <td>phone no :</td>
+                <td> <input type="text" name="phone_number" value={{ d.phone_number }}></td>
+            </tr>
+
+             <tr>
+                <td>resume :</td>
+                 <td><a href="{{ d.resume.url }}">resume</a></td>
+                <td> <input type="file" name="resume"></td>
+            </tr>
+            <tr>
+                <td> domain :  </td>
+                <td>AI : <input type="radio" name="domain"  value="AI"></td>
+                <td>MECHANICAL : <input type="radio" name="domain" VALUE="MECHANICAL" ></td>
+                <td>ELECTRICAL : <input type="radio" name="domain" VALUE="ELECTRICAL" ></td>
+            </tr>
+
+            <tr>
+                <td>Enter New Password :</td>
+                <td> <input type="text" name="password"></td>
+
+            </tr>
+            <tr>
+               <center><td colspan="2"> <input type="submit" value="Change Password"></td></center>
+            </tr>
+        </form>
+    </table>
+
+</center>
+</body>
+</html>

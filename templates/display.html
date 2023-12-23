@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Name : </th>
+    <th>Roll No. : </th>
+    <th>Address : </th>
+    <th>Password : </th>
+    </thead>
+    <tbody>
+    {% for i in s %}
+        <tr>
+        <td>{{ i.user_name }}</td>
+        <td>{{ i.password }}</td>
+            <td>{{ i.phone_number }}</td>
+            <td>{{ i.adress }}</td>
+            <td>{{ i.mail_id }}</td>
+            <td>{{ i.gender }}</td>
+            <td>{{ i.date_of_birth }}</td>
+        <td><a href="update/{{ i.id }}">Update</a></td>
+        <td><a href="delete/{{ i.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<form action="add" method="post">
+    {% csrf_token %}
+    <input type="submit" value="add">
+</form>
+</body>
+</html>

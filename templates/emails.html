@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>email</title>
+</head>
+<body>
+<h1>contact form</h1>
+<h1>PLEASE ENTER YOUR COVER LETTER </h1>
+<form method="post" action="emails">
+    {% csrf_token %}
+    <textarea name="message" placeholder="message...">
+
+
+    </textarea>
+
+
+
+         <input type="submit" value="send">
+
+</form>
+
+
+</body>
+</html>

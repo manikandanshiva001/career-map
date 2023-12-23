@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about </title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic";
+}
+body{
+    height: 100vh;
+    background-size:cover ;
+    background-position: center;
+    background-color: lightgreen;
+
+}
+u1{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+u1 li{
+    display: inline-block;
+}
+u1 li a{
+    text-decoration: blink;
+    color: deeppink;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+u1 li.active{
+    background-color:white;
+    color: black;
+}
+u1 li a:hover{
+    background-color: white;
+    color:black;
+}
+
+
+body{
+
+
+    margin-top:0px ;
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+.logo{
+    float: left;
+    width: 150px;
+    height: auto;
+    margin-top:15px ;
+    color: white;
+
+}
+
+.main{
+    max-width: 1300px;
+    margin: auto;
+}
+.about_details{
+     position: absolute;
+    left: 70%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+.about_details p{
+
+    color: black;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-family: "Rage Italic";
+}
+.postjob{
+      position: absolute;
+    left: 20%;
+    top: 30%;
+    font-size: large;
+}
+.postjob a{
+    text-decoration: blink;
+    color: deeppink;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+.postjob a:hover{
+     background-color: white;
+    color:black;
+}
+.bottom{
+     float: right;
+    list-style-type: none;
+    margin-top: 45%;
+}
+.bottom a{
+    display: inline-block;
+    text-decoration: blink;
+    color: deeppink;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+</style>
+
+</head>
+<body >
+    <form method="post">
+        <div class="main">
+            <div class="logo">
+                <h2>Career Map</h2>
+
+            </div>
+        <u1>
+            <li ><a href="/home">Home</a> </li>
+            <li><a href="/service">services</a> </li>
+            <li><a href="/go_to_login">Login</a> </li>
+            <li><a href="add_details">New User</a> </li>
+            <li><a href="contact_details">Contect Us</a> </li>
+            <li class="active"><a href="about_us">About</a> </li>
+         </u1>
+        </div>
+        <div class="about_details">
+            <b>
+                <p>
+                   Best Jobs Online is a multi-national online employment solution for people seeking jobs and the employers who need to find people. At the heart of our mission and and vision is innovation: We are changing the way people think about finding work. Everyday we help people change their lives.
+                </p>
+                <p>
+                    <br><br>Founder of this company is MANIKANDAN who is working to provide a service for youngsters
+                </p>
+            </b>
+
+        </div>
+        <div class="postjob">
+            <a href="post_jobs">Post job & find talent</a>
+        </div>
+        <div class="bottom">
+            <a href="/home"> Home</a>
+            <a href="about_us"> About us</a>
+            <a href="#"> Terms & conditions</a>
+            <a href="#"> Privacy & cookie policy</a>
+            <a href="contact_details"> Contact us</a>
+            <a href="post_jobs"> Post job</a>
+            <a href="#"> Brows by category</a>
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>

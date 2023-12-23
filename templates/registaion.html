@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <style>
+        body{
+            background-color: #bcdb8d;
+
+        }
+        fieldset{
+                height:450px;
+                width:400px;
+                margin-top:80px;
+            }
+         table {
+             border-collapse: collapse;
+             margin: 10px;
+         }
+         input{
+                height: 30px;
+                width: 150px;
+            }
+
+    </style>
+</head>
+<body>
+<center>
+<fieldset>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ fo.as_p }}
+        <input type="submit" value="Register now">
+
+    </form>
+</fieldset>
+</center>
+</body>
+</html>

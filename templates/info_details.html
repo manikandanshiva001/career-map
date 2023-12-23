@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>job seeker details</title>
+
+    <style>
+        table,th,tr,td{
+
+            border: 1px solid black;
+            border-collapse: collapse;
+}
+        table{
+            width: 80%;
+            height: 30%;
+            text-align: center;
+            background-color: #00ccff;
+        }
+        td{
+            vertical-align: center;
+        }
+       tr :hover{
+            background-color: blue;
+            color: white;
+        }
+       h1{
+            background: linear-gradient(red,blue) ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<CENTER><h1>JOB SEEKER DETAILS</h1></CENTER>
+<center>
+<table>
+    <thead>
+        <th>
+           <h3>user_name </h3>
+        </th>
+
+        <th>
+             <h3>mail id </h3>
+        </th>
+        <th>
+             <h3>resume </h3>
+        </th>
+        <th>
+             <h3>domain </h3>
+        </th>
+        <th>
+             <h3>phone number </h3>
+        </th>
+
+    </thead>
+    <tbody>
+    {% for i in g %}
+        <tr>
+        <td>{{ i.user_name }}</td>
+        <td>{{ i.mail_id }}</td>
+        <td><a href="{{ i.resume.url }}">resume</a></td>
+        <td>{{ i.domain }}</td>
+        <td>{{ i.phone_number }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</center>
+</body>
+</html>

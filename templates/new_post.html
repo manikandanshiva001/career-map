@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check and new post</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/new_post.css' %}">
+    <style>
+         *{
+            background-color: white;
+  }
+
+        table,tr,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            width: 80%;
+            height: 30%;
+            text-align: center;
+            background-color: #00ccff;
+        }
+        td{
+            vertical-align: center;
+        }
+        tr:hover{
+            background-color: blue;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+<h1>welcome</h1>
+    <table>
+        <thead>
+        <th>
+            job title :
+        </th>
+        <th>
+            job discription :
+        </th>
+        <th>
+            contact :
+        </th>
+        <th>
+            company name :
+        </th>
+        <th>
+            ID :
+        </th>
+        </thead>
+        <tbody>
+        {% for i in y %}
+            <tr>
+            <td>{{ i.job_title }}</td>
+            <td>{{ i.job_description }}</td>
+            <td>{{ i.contact }}</td>
+            <td>{{ i.company_name }}</td>
+            <td>{{ i.id }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table><br>
+<form action="add job" method="post">
+    {% csrf_token %}
+    <input type="submit" value="add new job">
+
+</form>
+</center>
+
+</body>
+</html>

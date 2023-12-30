@@ -1,7 +1,7 @@
 {
     "builds" : [
         {
-            "src": "C:/Users/Admin/PycharmProjects/tr_1/tr_1/wsgi.py",
+            "src": "tr_1/tr_1/wsgi.py",
             "user":"@vercel/python",
             "config": {"maxLambdasize":"15mb","runtime":"python3.9"}
         }
@@ -9,7 +9,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"C:/Users/Admin/PycharmProjects/tr_1/tr_1/wsgi.py"
+            "dest":"tr_1/tr_1/wsgi.py"
         }
     ]
 }
